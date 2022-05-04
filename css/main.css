@@ -55,7 +55,7 @@ div.h3 {
   line-height: 1.2;
 }
 
-a { color: #076bb8; text-decoration: underline; }         /*HYPERLINK DECORATION*/
+a { text-decoration: none; color: #0069ba; }         /*HYPERLINK DECORATION*/
 a:hover { color: #008716; text-decoration: underline; }
 
 .navmenu a{
