@@ -1,0 +1,17 @@
+"KS test parameters: w_min = 0.12, w_max = 2.5, n_w = 12, d_c = 0.77, n_c = 3"
+"Right column indicates direction: 1 = up, -1 = down, e.g. abrupt warming vs. abrupt cooling"
+
+year,jump
+11.59,1
+12.145,1
+12.455,1
+14.16,-1
+16.625,1
+17.195,1
+25.6,1
+29.72,-1
+30.36,1
+30.66,-1
+39.11,-1
+53.57,1
+58.975,1
