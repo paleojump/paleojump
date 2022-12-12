@@ -219,6 +219,48 @@ table.sortable tbody tr:nth-child(2n+1) td {
 </ul>
 
 <ul style="padding: 15px 50px 15px 50px;">
+	
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+	
+<script>
+$(document).ready(function () {
+    $('table.display').DataTable({
+        order: [[1, 'desc']],
+        scrollY: '500px',
+        scrollCollapse: true,
+        paging: false,
+        info: false,
+    });
+});
+</script>
+	
+<table id="" class="display" style="width:100%">
+<thead><th>Site name</th><th class="sorttable_numeric">Location (Lat, Lon)</th><th class="sorttable_numeric">Elevation</th><th class="sorttable_numeric">Period</th><th class="sorttable_numeric">Max resolution</th><th>Proxies</th><th>Publication</th><th>Data</th><th>Detected transitions</th></tr></thead><tbody>
+ <tr><td>Lake El'gygytgyn</td><td>67.4997, 172.1039</td><td>170 m</td><td>3.6 - 0 My BP</td><td>27 y</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.783305" target=_blank>Mn/Fe; Si/Ti; magnetic susceptibility</a>; <a href="https://doi.pangaea.de/10.1594/PANGAEA.829515" target=_blank>TOC; TIC; biogenic Si</a></td><td><a href="https://doi.org/10.1126/science.1222135" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.5194/cp-10-209-2014" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Lake Baikal</td><td>53.696, 108.3516</td><td>456 m</td><td>1.8 - 0 My BP</td><td>223 y</td><td><a href="https://www.ncei.noaa.gov/paleo-search/study/6068" target=_blank>biogenic silica</a></td><td><a href="https://doi.org/10.1016/j.quascirev.2006.10.002" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Füramoos</td><td>47.9833, 9.8833</td><td>662 m</td><td>140 - 0 ky BP</td><td>&nbsp;</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.835950" target=_blank>pollen</a></td><td><a href="https://doi.org/10.1016/S0033-5894(03)00005-X" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Les Echets</td><td>45.8333, 5</td><td>267 m</td><td>46 - 15 ky BP</td><td>&nbsp;</td><td><a href="https://doi.org/10.17043/wohlfarth-2016-les-echets-1" target=_blank>pollen; diatoms; magnetic susceptibility; geochemistry</a></td><td><a href="https://doi.org/10.1016/j.quascirev.2008.04.014" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.1111/j.1502-3885.2008.00066.x" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Lac du Bouchet</td><td>44.83, 3.82</td><td>1200 m</td><td>70 - 0 ky BP</td><td>89 y</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.872878" target=_blank>pollen</a>; <a href="https://doi.pangaea.de/10.1594/PANGAEA.872797" target=_blank>temperate forest pollen</a></td><td><a href="https://doi.org/10.1016/0031-0182(90)90032-3" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.5194/essd-9-679-2017" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Summer Lake</td><td>42.83, -120.75</td><td>1260 m</td><td>46 - 23 ky BP</td><td>76 y</td><td><a href="https://www.ncei.noaa.gov/paleo-search/study/17014" target=_blank>δ18O; δ13C</a></td><td><a href="https://doi.org/10.1016/S0277-3791(03)00210-5" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Valle di Castiglione</td><td>41.9, 12.76</td><td>44 m</td><td>56 - 14 ky BP</td><td>357 y</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.872918" target=_blank>pollen</a>; <a href="https://doi.pangaea.de/10.1594/PANGAEA.872823" target=_blank>temperate forest pollen</a></td><td><a href="https://doi.org/10.1016/1040-6182(89)90076-1" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.5194/essd-9-679-2017" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Tenaghi Philippon</td><td>41.17, 24.33</td><td>40 m</td><td>1.35 - 0 My BP</td><td>&nbsp;</td><td>pollen</td><td><a href="https://doi.org/10.1016/j.quascirev.2006.09.002" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Lake Ohrid</td><td>41.0492, 20.715</td><td>693 m</td><td>1.36 - 0 My BP</td><td>208 y</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.896848" target=_blank>δ18O; δ13C; TIC</a>; <a href="https://doi.pangaea.de/10.1594/PANGAEA.868255" target=_blank>Zr/K</a>; <a href="https://doi.pangaea.de/10.1594/PANGAEA.892362" target=_blank>pollen; ...</a></td><td><a href="https://doi.org/10.1038/s41586-019-1529-0" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.5194/bg-13-1179-2016" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.5194/bg-13-1423-2016" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.1073/pnas.2026111118" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Lago di Monticchio</td><td>40.9317, 15.6049</td><td>656 m</td><td>100 - 10 ky BP</td><td>120 y</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.872880" target=_blank>pollen</a>; <a href="https://doi.pangaea.de/10.1594/PANGAEA.872799" target=_blank>temperate forest pollen</a>; <a href="https://www.ncei.noaa.gov/paleo-search/study/5463" target=_blank>biogenic silica; dry density</a></td><td><a href="https://doi.org/10.1038/23432" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.1016/S1040-6182(00)00067-7" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.1016/S0277-3791(99)00007-4" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Ioannina</td><td>39.75, 20.85</td><td>470 m</td><td>130 - 0 ky BP</td><td>&nbsp;</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.872926" target=_blank>pollen</a>; <a href="https://doi.pangaea.de/10.1594/PANGAEA.872791" target=_blank>temperate forest pollen</a></td><td><a href="https://doi.org/10.1130/G20118.1" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.5194/essd-9-679-2017" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Lake Van</td><td>38.667, 42.669</td><td>1649 m</td><td>250 - 129 ky BP</td><td>336 y</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.871228" target=_blank>δ18O; δ13C; pollen; ...</a></td><td><a href="https://doi.org/10.5194/cp-2016-133" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Padul</td><td>37, -3.67</td><td>785 m</td><td>197 - 0 ky BP</td><td>&nbsp;</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.904053" target=_blank>pollen</a>; <a href="https://doi.pangaea.de/10.1594/PANGAEA.940006" target=_blank>precipitation</a></td><td><a href="https://doi.org/10.1016/j.quascirev.2018.08.014" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.1016/j.quascirev.2021.106814" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.1038/s41598-022-12047-1" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Dead Sea</td><td>31.5081, 35.471</td><td>N/A</td><td>88 - 14 ky BP</td><td>242 y</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.900564" target=_blank>pollen</a></td><td><a href="https://doi.org/10.1016/j.quascirev.2019.04.033" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Lake Tulane</td><td>27.584, -81.5022</td><td>36 m</td><td>61 - 0 ky BP</td><td>&nbsp;</td><td><a href="https://www.researchgate.net/publication/257940352_Pollen_data_lake_Tulane_L_Annie_Clim_Dyn_2011/link/00b7d526638f4377d0000000/download" target=_blank>Pinus pollen</a></td><td><a href="https://doi.org/10.1016/j.quascirev.2006.04.008" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Lake Tanganyika</td><td>-6.7138, 29.8326</td><td>773 m</td><td>59 - 1 ky BP</td><td>260 y</td><td><a href="https://www.ncei.noaa.gov/paleo-search/study/6206" target=_blank>δ13C; δD; Lake Surface Temperature</a></td><td><a href="https://doi.org/10.1126/science.1160485" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Lake Malawi</td><td>-11.2939, 34.4372</td><td>500 m</td><td>1.28 - 0 My BP</td><td>14 y</td><td><a href="https://www.ncei.noaa.gov/paleo-search/study/21890" target=_blank>Ca; T; δ13C</a></td><td><a href="https://doi.org/10.1038/nature19065" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Lake Titicaca</td><td>-15.9368, -69.16</td><td>3810 m</td><td>370 - 3 ky BP</td><td>28 y</td><td><a href="https://www.ncei.noaa.gov/paleo-search/study/6069" target=_blank>TOC; δ13C</a>; <a href="https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/southamerica/bolivia/titicaca2010.txt" target=_blank>grain size</a></td><td><a href="https://doi.org/10.1016/j.yqres.2007.07.008" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.1016/j.quascirev.2010.01.001" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td></td></tr>
+</tbody></table>
+	
+</ul>
+
+
+<ul style="padding: 15px 50px 15px 50px;">
   <a id="add"></a><div class="h11">Additional information</div>
   <div style="padding-left: 30px;">
     <li>This database is continuously updated and might still include errors and/or incomplete information. Please verify the references and the original data before using the information provided here.</li>
