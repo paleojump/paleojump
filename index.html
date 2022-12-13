@@ -17,45 +17,43 @@ Witold Bagniewski, Denis-Didier Rousseau, and Michael Ghil
 <iframe width="100%" height="600px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/en/map/paleojump_753829?scaleControl=true&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=true&searchControl=false&tilelayersControl=null&embedControl=false&datalayersControl=true&onLoadPanel=none&captionBar=false"></iframe><a href="//umap.openstreetmap.fr/en/map/paleojump_753829">See full screen</a>
 </ul>
 
-<ul style="padding: 15px 50px 15px 50px;">
-<a id="t1"></a><div class="h11">Table 1: Marine Sediment Cores</div>
-<script src="/js/sorttable.js"></script>
-<style type="text/css">
-	table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
-    content: " \21D5" 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.13.1/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="/js/sort-numbers-ignore-text.js"></script>
+
+<style>
+.dataTables_wrapper { font-family: "Arial"}
+th {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
 }
-	table.sortable {
-		font-size: 14px;
-		padding: 2.5px;
-		border: 1px solid #878787; 
-		border-collapse: collapse;
-		font-family: Arial, Helvetica, sans-serif;
-		line-height: 1.5;
-	    /*	background: #f2fff3;  */
-	} 
-	.sortable td {
-		text-align: center;
-  		vertical-align: middle;
-		padding: 2.5px;
-		border: 1px solid #878787;
-	}
-	.sortable th {
-		padding: 2px;
-		border: 1px solid #878787; 
-		background-color: #474747; 
-		color: #FFF;
-		font-weight: bold;
-		cursor: pointer;
-	}
-table.sortable tbody tr:nth-child(2n) td {
-  background: #f4f4f4;
-}
-table.sortable tbody tr:nth-child(2n+1) td {
-  background: #dbdbdb;
+th:first-child {
+  border-left: 1px solid #dddddd;
 }
 </style>
-<table class="sortable">
-<thead><th>Site name</th><th class="sorttable_numeric">Location (Lat, Lon)</th><th class="sorttable_numeric">Depth</th><th class="sorttable_numeric">Period</th><th class="sorttable_numeric">Max resolution</th><th>Proxies</th><th>Publication</th><th>Data</th><th>Detected transitions</th></tr></thead><tbody>
+
+<script>
+$(document).ready(function () {
+    $('table.display').DataTable({
+        columnDefs: [
+        { type: 'sort-numbers-ignore-text', targets: [1,2,3,4] },
+	{"className": "dt-center", "targets": "_all"}
+      ],
+        order: [[1, 'desc']],
+        scrollY: '600px',
+        scrollCollapse: true,
+        paging: false,
+        info: false,
+  	searching: false,
+    });
+});
+</script>
+
+<ul style="padding: 15px 35px 15px 50px;">
+<a id="t1"></a><div class="h11">Table 1: Marine Sediment Cores</div>
+<table class="display compact cell-border">
+<thead><tr style="background-color:#eaeaea"><th>Site name</th><th>Location (Lat, Lon)</th><th>Depth</th><th>Period</th><th>Max resolution</th><th>Proxies</th><th>Publication</th><th>Data</th><th>Detected transitions</th></tr></thead><tbody>
  <tr><td>MD95-2010</td><td>66.6842, 4.5662</td><td>1226 m</td><td>67 - 10 ky BP</td><td>35 y</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.61471" target=_blank>pla δ18O; ben δ18O; pla δ13C; ben δ13C; IRD; magnetic susceptibility</a></td><td><a href="https://doi.org/10.1038/46753" target=_blank>&#x1F4F0</a></td><td><a href="/data/MD95-2010.tab" target=_blank>&#x1F4BE</a></td><td><a href="/results/MD95-2010_d18O_KS.pdf" target=_blank>pla δ18O</a>; <a href="/results/MD95-2010_d18O_122ky_KSjumps.csv" target=_blank>pla δ18O jumps</a></td></tr>
  <tr><td>ODP162-983</td><td>60.4035, -23.6407</td><td>1984 m</td><td>1.2 - 0 My BP</td><td>89 y</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.929721" target=_blank>IRD; %NPS</a></td><td><a href="https://doi.org/10.1029/2019PA003661" target="_blank">&#x1F4F0</a></td><td><a href="/data/ODP162-983.tab" target=_blank>&#x1F4BE</a></td><td><a href="/results/ODP162-983_NPS_KS.pdf" target=_blank>NPS</a>; <a href="/results/ODP162-983_NPS_KSjumps.csv" target=_blank>NPS jumps</a></td></tr>
  <tr><td>SO82‐5</td><td>59.1862, -30.9048</td><td>1416 m</td><td>57 - 15 ky BP</td><td>62 y</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.261313" target=_blank>pla δ18O; ben δ18O; pla δ13C; ben δ13C; SST; IRD</a>; <a href="https://doi.pangaea.de/10.1594/PANGAEA.905274" target=_blank>Age Model</a></td><td><a href="https://doi.org/10.1029/1999PA000464" target=_blank>&#x1F4F0</a> <a href="https://doi.org/10.1038/s41597-019-0173-8" target=_blank>&#x1F4F0</a></td><td><a href="/data/SO82_5-2.tab" target=_blank>&#x1F4BE</a></td><td><a href="/results/SO82_5-2_d18O_KS.pdf" target=_blank>pla δ18O</a>; <a href="/results/SO82_5-2_d18O_KSjumps.csv" target=_blank>pla δ18O jumps</a></td></tr>
@@ -108,10 +106,10 @@ table.sortable tbody tr:nth-child(2n+1) td {
 </tbody></table>
 </ul>
 
-<ul style="padding: 15px 50px 15px 50px;">
-  <a id="t2"></a><div class="h11">Table 2: Ice Cores</div>
-<table class="sortable">
-<thead><th>Site name</th><th class="sorttable_numeric">Location (Lat, Lon)</th><th class="sorttable_numeric">Elevation</th><th class="sorttable_numeric">Period</th><th class="sorttable_numeric">Max resolution</th><th>Proxies</th><th>Publication</th><th>Data</th><th>Detected transitions</th></tr></thead><tbody>
+<ul style="padding: 15px 35px 15px 50px;">
+<a id="t2"></a><div class="h11">Table 2: Ice Cores</div>
+<table class="display compact cell-border">
+<thead><tr style="background-color:#eaeaea"><th>Site name</th><th>Location (Lat, Lon)</th><th>Elevation</th><th>Period</th><th>Max resolution</th><th>Proxies</th><th>Publication</th><th>Data</th><th>Detected transitions</th></tr></thead><tbody>
  <tr><td>NEEM</td><td>77.45, -51.06</td><td>2545 m</td><td>129 - 0 ky b2k</td><td>&nbsp;</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.925552" target=_blank>δ18O</a>; <a href="http://www.iceandclimate.nbi.ku.dk/data/" target=_blank>Ca2+; Na+; ...</a></td><td><a href="https://doi.org/10.1038/s41597-021-00916-9" target=_blank>&#x1F4F0</a> <a href="https://doi.org/10.5194/cp-9-2713-2013" target=_blank>&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>NGRIP</td><td>75.1, -42.32</td><td>2925 m</td><td>122 - 0 ky b2k</td><td>20 y</td><td><a href="http://www.iceandclimate.nbi.ku.dk/data/" target=_blank>δ18O; Ca2+; dust</a>; <a href="https://cp.copernicus.org/articles/10/903/2014/cp-10-903-2014-supplement.zip" target=_blank>CH4</a></td><td><a href="https://doi.org/10.1016/j.quascirev.2014.09.007" target=_blank>&#x1F4F0</a> <a href="https://doi.org/10.5194/cp-10-903-2014" target=_blank>&#x1F4F0</a></td><td><a href="/data/NGRIP.tab" target=_blank>&#x1F4BE</a></td><td><a href="/results/NGRIP_d18o_20y.pdf" target=_blank>δ18O</a>; <a href="/results/NGRIP_dust.pdf" target=_blank>dust</a>; <a href="/results/NGRIP CH4" target=_blank>CH4</a>; <a href="/results/ROC_all.pdf" target=_blank>ROC analysis</a>; <a href="/results/WP1_NGRIP_abrupt-transition_database_V2.xlsx" target=_blank>transitions(U)</a></td></tr>
  <tr><td>GISP2</td><td>72.97, -38.8</td><td>3208 m</td><td>104 - 0 ky b2k</td><td>20 y</td><td><a href="http://www.iceandclimate.nbi.ku.dk/data/" target=_blank>δ18O; Ca2+; CH4; δ15N; ...</a></td><td><a href="https://doi.org/10.1016/j.quascirev.2014.09.007" target=_blank>&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
@@ -127,10 +125,10 @@ table.sortable tbody tr:nth-child(2n+1) td {
 </tbody></table>
 </ul>
 
-<ul style="padding: 15px 50px 15px 50px;">
-  <a id="t3"></a><div class="h11">Table 3: Speleothems</div>
-<table class="sortable">
-<thead><th>Site name</th><th class="sorttable_numeric">Location (Lat, Lon)</th><th class="sorttable_numeric">Elevation</th><th class="sorttable_numeric">Period</th><th class="sorttable_numeric">Max resolution</th><th>Proxies</th><th>Publication</th><th>Data</th><th>Detected transitions</th></tr></thead><tbody>
+<ul style="padding: 15px 35px 15px 50px;">
+<a id="t3"></a><div class="h11">Table 3: Speleothems</div>
+<table class="display compact cell-border">
+<thead><tr style="background-color:#eaeaea"><th>Site name</th><th>Location (Lat, Lon)</th><th>Elevation</th><th>Period</th><th>Max resolution</th><th>Proxies</th><th>Publication</th><th>Data</th><th>Detected transitions</th></tr></thead><tbody>
  <tr><td>Gassel Tropfsteinhöhle cave</td><td>47.8228, 13.8428</td><td>1225 m</td><td>108 - 77 ky BP</td><td>5 y</td><td><a href="https://www.ncei.noaa.gov/paleo-search/study/28390" target=_blank>δ18O</a></td><td><a href="https://doi.org/10.5194/cp-16-29-2020" target=_blank>&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>Grete-Ruth cave</td><td>47.5429, 12.0272</td><td>1435 m</td><td>111 - 103 ky BP</td><td>12 y</td><td><a href="https://www.ncei.noaa.gov/paleo-search/study/28390" target=_blank>δ18O</a></td><td><a href="https://doi.org/10.5194/cp-16-29-2020" target=_blank>&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>Hölloch im Mahdtal cave</td><td>47.3779, 10.1505</td><td>1438 m</td><td>74.4 - 73.6 ky BP</td><td>5 y</td><td><a href="https://www.ncei.noaa.gov/paleo-search/study/28390" target=_blank>δ18O</a></td><td><a href="https://doi.org/10.5194/cp-16-29-2020" target=_blank>&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
@@ -166,10 +164,10 @@ table.sortable tbody tr:nth-child(2n+1) td {
 </tbody></table>
 </ul>
 
-<ul style="padding: 15px 50px 15px 50px;">
-  <a id="t4"></a><div class="h11">Table 4: Loess Records</div>
-<table class="sortable">
-<thead><th>Site name</th><th class="sorttable_numeric">Location (Lat, Lon)</th><th class="sorttable_numeric">Elevation</th><th class="sorttable_numeric">Period</th><th class="sorttable_numeric">Max resolution</th><th>Proxies</th><th>Publication</th><th>Data</th><th>Detected transitions</th></tr></thead><tbody>
+<ul style="padding: 15px 35px 15px 50px;">
+<a id="t4"></a><div class="h11">Table 4: Loess Records</div>
+<table class="display compact cell-border">
+<thead><tr style="background-color:#eaeaea"><th>Site name</th><th>Location (Lat, Lon)</th><th>Elevation</th><th>Period</th><th>Max resolution</th><th>Proxies</th><th>Publication</th><th>Data</th><th>Detected transitions</th></tr></thead><tbody>
  <tr><td>ELSA-Eifel loess stack</td><td>50.16, 6.83</td><td>403 m</td><td>132 - 0 ky BP</td><td>100 y</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.868665" target=_blank>dust</a></td><td><a href="https://doi.org/10.1029/2009GL039716" target="_blank">&#x1F4F0</a></td><td><a href="/data/ELSA-Eifel.tab" target=_blank>&#x1F4BE</a></td><td><a href="/results/ELSA.pdf" target=_blank>dust</a>; <a href="/results/ELSA 122ky.pdf" target=_blank>dust 122ky</a>; <a href="/results/Transitions_ELSA_Eifel.xlsx" target=_blank>Transitions(W)</a></td></tr>
  <tr><td>Nussloch loess</td><td>49.3164, 8.7217</td><td>180 m</td><td>130 - 18 ky BP</td><td>&nbsp;</td><td>grain size; δ13C; Snails; earth worms; magnetic susceptibility; paleosol-loess doublets</td><td><a href="https://doi.org/10.1016/j.quascirev.2017.05.020" target=_blank>&#x1F4F0</a> <a href="https://doi.org/10.1073/pnas.1614751114" target=_blank>&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>Dunaszekcso loess</td><td>46.0903, 18.7625</td><td>135 m</td><td>150 - 20 ky BP</td><td>&nbsp;</td><td>grain size; paleosol-loess doublets</td><td><a href="https://doi.org/10.1016/j.quascirev.2014.06.009" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
@@ -193,10 +191,10 @@ table.sortable tbody tr:nth-child(2n+1) td {
 </tbody></table>
 </ul>
 
-<ul style="padding: 15px 50px 15px 50px;">
-  <a id="t5"></a><div class="h11">Table 5: Lake Sediment Cores</div>
-<table class="sortable">
-<thead><th>Site name</th><th class="sorttable_numeric">Location (Lat, Lon)</th><th class="sorttable_numeric">Elevation</th><th class="sorttable_numeric">Period</th><th class="sorttable_numeric">Max resolution</th><th>Proxies</th><th>Publication</th><th>Data</th><th>Detected transitions</th></tr></thead><tbody>
+<ul style="padding: 15px 35px 15px 50px;">
+<a id="t5"></a><div class="h11">Table 5: Lake Sediment Cores</div>
+<table class="display compact cell-border">
+<thead><tr style="background-color:#eaeaea"><th>Site name</th><th>Location (Lat, Lon)</th><th>Elevation</th><th>Period</th><th>Max resolution</th><th>Proxies</th><th>Publication</th><th>Data</th><th>Detected transitions</th></tr></thead><tbody>
  <tr><td>Lake El'gygytgyn</td><td>67.4997, 172.1039</td><td>170 m</td><td>3.6 - 0 My BP</td><td>27 y</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.783305" target=_blank>Mn/Fe; Si/Ti; magnetic susceptibility</a>; <a href="https://doi.pangaea.de/10.1594/PANGAEA.829515" target=_blank>TOC; TIC; biogenic Si</a></td><td><a href="https://doi.org/10.1126/science.1222135" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.5194/cp-10-209-2014" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>Lake Baikal</td><td>53.696, 108.3516</td><td>456 m</td><td>1.8 - 0 My BP</td><td>223 y</td><td><a href="https://www.ncei.noaa.gov/paleo-search/study/6068" target=_blank>biogenic silica</a></td><td><a href="https://doi.org/10.1016/j.quascirev.2006.10.002" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>Füramoos</td><td>47.9833, 9.8833</td><td>662 m</td><td>140 - 0 ky BP</td><td>&nbsp;</td><td><a href="https://doi.pangaea.de/10.1594/PANGAEA.835950" target=_blank>pollen</a></td><td><a href="https://doi.org/10.1016/S0033-5894(03)00005-X" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
@@ -216,6 +214,24 @@ table.sortable tbody tr:nth-child(2n+1) td {
  <tr><td>Lake Malawi</td><td>-11.2939, 34.4372</td><td>500 m</td><td>1.28 - 0 My BP</td><td>14 y</td><td><a href="https://www.ncei.noaa.gov/paleo-search/study/21890" target=_blank>Ca; T; δ13C</a></td><td><a href="https://doi.org/10.1038/nature19065" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>Lake Titicaca</td><td>-15.9368, -69.16</td><td>3810 m</td><td>370 - 3 ky BP</td><td>28 y</td><td><a href="https://www.ncei.noaa.gov/paleo-search/study/6069" target=_blank>TOC; δ13C</a>; <a href="https://www.ncei.noaa.gov/pub/data/paleo/paleolimnology/southamerica/bolivia/titicaca2010.txt" target=_blank>grain size</a></td><td><a href="https://doi.org/10.1016/j.yqres.2007.07.008" target="_blank">&#x1F4F0</a> <a href="https://doi.org/10.1016/j.quascirev.2010.01.001" target="_blank">&#x1F4F0</a></td><td>&nbsp;</td><td></td></tr>
 </tbody></table>
+</ul>
+
+<ul style="padding: 15px 35px 15px 50px;">
+<div class="h11">Usage</div>
+<div style="padding-left: 30px;">
+<li>The methods used for detecting the provided transitions are part of the <a href="https://github.com/kriechers/TiPES_statistical_toolbox/" target=_blank>TiPES Statistical Toolbox</a>.</li>
+<li>To import the CSV files in Python, use:
+<pre><code>import pandas as pd
+data = pd.read_csv('filename.csv', comment='#')
+</code></pre>
+</li>
+In Matlab, use:
+<pre><code>C = readcell('filename.csv', 'CommentStyle', '#');
+data = cell2table(C(2:end,:), 'VariableNames', C(1,:));
+</code></pre>
+In Excel, select Comma as the delimiter/separator.
+</li>
+</div>
 </ul>
 
 <ul style="padding: 15px 50px 15px 50px;">
