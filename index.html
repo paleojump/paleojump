@@ -231,6 +231,8 @@ pre code {
 <div style="padding-left: 30px;">
 <li>This database is continuously updated and might still include errors and/or incomplete information. Please verify the references and the original data before using the information provided here.</li>
 <li>The "Detected transitions" were produced with methods availabe from the <a href="https://github.com/kriechers/TiPES_statistical_toolbox/" target=_blank>TiPES Statistical Toolbox</a> and described in <a href="https://doi.org/10.1063/5.0062543" target=_blank>"Automatic detection of abrupt transitions in paleoclimate records"</a>, W. Bagniewski, M. Ghil, D.-D. Rousseau, 2021, <i>Chaos</i>, 31(11):113129.</li>
+<li>The "Max resolution" column represents the maximum resolution over any 10 ky interval, for time periods older than 14 ky BP.</li>
+<li>Please note that the table rows are sortable.</li>
 <li>To import the CSV files in Python, use:
 <pre><code>import pandas as pd
 data = pd.read_csv('filename.csv', comment='#')
@@ -242,8 +244,6 @@ data = cell2table(C(2:end,:), 'VariableNames', C(1,:));
 </code></pre>
 In Excel, select Comma as the delimiter/separator.
 </li>
-<li>The "Max resolution" column represents the maximum resolution over any 10 ka interval, for time periods older than 14 ka BP.</li>
-<li>Please note that the table rows are sortable.</li>
 </div>
 </ul>
 
