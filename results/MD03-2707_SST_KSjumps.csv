@@ -1,0 +1,23 @@
+# KS test parameters: w_min = 0.22, w_max = 2.2, n_w = 15, d_c = 0.77, n_c = 3, s_c = 2.3, x_c = 0.55
+# The sign of a jump indicates direction: 1 = up, -1 = down, e.g. abrupt warming vs. abrupt cooling
+
+time,jump
+14.655,1
+27.255,-1
+29.645,1
+30.945,-1
+40.67,1
+42.28,-1
+52.48,-1
+55.07,-1
+71.065,-1
+72.285,-1
+77.64,1
+84.01,-1
+107.84,-1
+108.835,1
+117.975,-1
+120.365,-1
+127.275,1
+130.25,1
+153.435,1
